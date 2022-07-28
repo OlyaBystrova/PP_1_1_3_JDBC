@@ -24,17 +24,12 @@ public class Main {
         key.saveUser(user3.getName(), user3.getLastName(), user3.getAge());
         key.saveUser(user4.getName(), user4.getLastName(), user4.getAge());
 
-//        List<User> users = key.getAllUsers();
-//        for (User i : users) {
-//            System.out.println(i);
-//        }
-
-        key.removeUserById(2);
-
         List<User> users = key.getAllUsers();
         for (User i : users) {
             System.out.println(i);
         }
+
+        key.removeUserById(2);
 
         key.cleanUsersTable();
 

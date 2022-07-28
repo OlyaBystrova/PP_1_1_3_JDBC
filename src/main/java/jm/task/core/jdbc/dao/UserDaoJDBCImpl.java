@@ -32,7 +32,6 @@ public class UserDaoJDBCImpl implements UserDao {
 
     public void dropUsersTable() {
         try (PreparedStatement preparedStatement = connection.prepareStatement("DROP TABLE IF EXISTS user")){
-//            PreparedStatement preparedStatement = connection.prepareStatement("DROP TABLE IF EXISTS user");
             preparedStatement.executeUpdate();
             connection.setAutoCommit(false);
             connection.commit();
